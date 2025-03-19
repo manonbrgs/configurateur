@@ -1,4 +1,4 @@
-# configurator
+# Configurator
 
 ### Description
 Software subscription plan configurator
