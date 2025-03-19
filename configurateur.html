@@ -1,0 +1,305 @@
+<!doctype html>
+
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Configurateur</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="jquery-3.6.1.min.js"></script>
+		<script src="script.js"></script>
+	</head>
+
+    <body>
+        <form id="configurateur">
+            <!--  Début  -->
+            <fieldset id="form-start">
+                <div>
+                    <img alt="" src="images/configurateur-start.png">
+                    <div>
+                        <h2 id="conf-title"><span>Calculez</span> <br>votre formule idéale</h2>
+                        <p>En seulement quelques étapes, configurez votre formule d’abonnement en fonction de vos besoins.</p>
+                    </div>
+                </div>
+                <input type="button" id="start" class="blue-btn" value="Commencez maintenant">
+            </fieldset>
+            <!--  Choix structure  -->
+            <fieldset id="form-statut">
+                <p class="form-title">Vous êtes...</p>
+                <div class="form-container">
+                    <div class="form-group form-group-3">
+                        <img alt="" src="images/independant.png">
+                        <label for="independant">Un.e indépendant.e</label>
+                        <input type="button" id="independant" class="blue-btn" value="Choisir">
+                    </div>
+                    <div class="form-group form-group-3">
+                        <img alt="" src="images/societe.png">
+                        <label for="societe">Une société</label>
+                        <input type="button" id="societe" class="blue-btn" value="Choisir">
+                    </div>
+                    <div class="form-group form-group-3">
+                        <img alt="" src="images/societes.png">
+                        <label for="societes">Plusieurs sociétés</label>
+                        <input type="button" id="societes" class="blue-btn" value="Choisir">
+                    </div>
+                </div>
+                <label class="previous-arrow">
+                    <input type="button" class="previous back-to-start">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.5939 22.9406L0.42378 12.7704C0.269687 12.6163 0.16028 12.4494 0.0955614 12.2696C0.0308423 12.0898 -0.00100321 11.8972 2.40772e-05 11.6918C2.40772e-05 11.4863 0.0323839 11.2937 0.0971029 11.1139C0.161822 10.9341 0.270714 10.7672 0.42378 10.6131L10.5939 0.442876C10.8764 0.16037 11.2298 0.0129533 11.6541 0.000625755C12.0783 -0.0117018 12.4441 0.135715 12.7512 0.442876C13.0594 0.725382 13.2202 1.07877 13.2335 1.50304C13.2469 1.92732 13.0989 2.29303 12.7897 2.6002L5.23918 10.1508H22.4591C22.8957 10.1508 23.2619 10.2987 23.5577 10.5946C23.8536 10.8905 24.001 11.2562 24 11.6918C24 12.1284 23.8526 12.4946 23.5577 12.7904C23.2629 13.0863 22.8967 13.2337 22.4591 13.2327H5.23918L12.7897 20.7833C13.0722 21.0658 13.2202 21.4254 13.2335 21.862C13.2469 22.2986 13.0989 22.6581 12.7897 22.9406C12.5072 23.2488 12.1477 23.4029 11.7111 23.4029C11.2745 23.4029 10.9021 23.2488 10.5939 22.9406Z" fill="#0C73B7"/>
+                    </svg>
+                </label>
+                <p class="progression">1/3</p>
+            </fieldset>	
+            <!--  Choix : Indépendant  -->
+            <fieldset id="form-independant">
+                <p class="form-title">Vous êtes un.e <span class="orange-text">indépendant.e</span> et...</p>
+                <div class="form-container">
+                    <div class="form-group form-group-2">
+                        <label for="sous-traitance">Vous travaillez exclusivement en sous traitance.</label>
+                        <input type="button" id="sous-traitance" class="blue-btn" value="Choisir">
+                    </div>
+                    <div class="form-group form-group-2">
+                        <label for="sous-traitance-vente-formations">Vous pouvez travailler en sous traitance et vous vendez des formations.</label>
+                        <input type="button" id="sous-traitance-vente-formations" class="blue-btn" value="Choisir">
+                    </div>
+                </div>
+                <label class="previous-arrow">
+                    <input type="button" class="previous back-to-statut">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.5939 22.9406L0.42378 12.7704C0.269687 12.6163 0.16028 12.4494 0.0955614 12.2696C0.0308423 12.0898 -0.00100321 11.8972 2.40772e-05 11.6918C2.40772e-05 11.4863 0.0323839 11.2937 0.0971029 11.1139C0.161822 10.9341 0.270714 10.7672 0.42378 10.6131L10.5939 0.442876C10.8764 0.16037 11.2298 0.0129533 11.6541 0.000625755C12.0783 -0.0117018 12.4441 0.135715 12.7512 0.442876C13.0594 0.725382 13.2202 1.07877 13.2335 1.50304C13.2469 1.92732 13.0989 2.29303 12.7897 2.6002L5.23918 10.1508H22.4591C22.8957 10.1508 23.2619 10.2987 23.5577 10.5946C23.8536 10.8905 24.001 11.2562 24 11.6918C24 12.1284 23.8526 12.4946 23.5577 12.7904C23.2629 13.0863 22.8967 13.2337 22.4591 13.2327H5.23918L12.7897 20.7833C13.0722 21.0658 13.2202 21.4254 13.2335 21.862C13.2469 22.2986 13.0989 22.6581 12.7897 22.9406C12.5072 23.2488 12.1477 23.4029 11.7111 23.4029C11.2745 23.4029 10.9021 23.2488 10.5939 22.9406Z" fill="#0C73B7"/>
+                    </svg>
+                </label>
+                <p class="progression">2/3</p>
+            </fieldset>	
+            <fieldset class="result result-inde result-sous-traitance">
+                <p>
+                    <span>Félicitations</span>, vous avez déterminé vos besoins !<br><br>
+                    Vous êtes donc un.e <span>indépendant.e</span> et vous travaillez <span>exclusivement en sous traitance</span>.
+                </p>
+                <img alt="" src="images/sous-traitance.png">
+                <p>La formule <span class="orange-text">« SOUS-TRAITANT »</span> est la<br>plus adaptée à votre activité<br><span class="orange-text">29€ HT / mois</span>.</p>
+                <div class="result-btns">
+                    <a href="/offre-sous-traitant/" class="blue-btn">Détail de la formule</a>
+                    <input type="button" class="blue-btn" value="J\'essaye gratuitement">
+                    <a href="/webinaires-demo/" class="blue-btn">Je participe à une démo en live</a>
+                    <a href="/inscription-formdev/" class="blue-btn">Je m\'inscris</a>
+                </div>
+                <p>Vous avez des questions ? <a href="/contact/">Contactez-nous</a></p>
+                <label class="previous-arrow">
+                    <input type="button" class="previous back-to-independant">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.5939 22.9406L0.42378 12.7704C0.269687 12.6163 0.16028 12.4494 0.0955614 12.2696C0.0308423 12.0898 -0.00100321 11.8972 2.40772e-05 11.6918C2.40772e-05 11.4863 0.0323839 11.2937 0.0971029 11.1139C0.161822 10.9341 0.270714 10.7672 0.42378 10.6131L10.5939 0.442876C10.8764 0.16037 11.2298 0.0129533 11.6541 0.000625755C12.0783 -0.0117018 12.4441 0.135715 12.7512 0.442876C13.0594 0.725382 13.2202 1.07877 13.2335 1.50304C13.2469 1.92732 13.0989 2.29303 12.7897 2.6002L5.23918 10.1508H22.4591C22.8957 10.1508 23.2619 10.2987 23.5577 10.5946C23.8536 10.8905 24.001 11.2562 24 11.6918C24 12.1284 23.8526 12.4946 23.5577 12.7904C23.2629 13.0863 22.8967 13.2337 22.4591 13.2327H5.23918L12.7897 20.7833C13.0722 21.0658 13.2202 21.4254 13.2335 21.862C13.2469 22.2986 13.0989 22.6581 12.7897 22.9406C12.5072 23.2488 12.1477 23.4029 11.7111 23.4029C11.2745 23.4029 10.9021 23.2488 10.5939 22.9406Z" fill="#0C73B7"/>
+                    </svg>
+                </label>
+                <p class="progression">3/3</p>
+            </fieldset>
+            <fieldset class="result result-inde result-sous-traitance-vente-formations">
+                <p>
+                    <span>Félicitations</span>, vous avez déterminé vos besoins !<br><br>
+                    Vous êtes donc un.e <span>indépendant.e</span> et vous <span>pouvez travailler en sous-traitance</span> et vous <span>vendez des formations</span>.
+                </p>
+                <img alt="" src="images/vente-formations.png">
+                <p>La formule <span class="orange-text">« SOLO »</span> est la<br>plus adaptée à votre activité<br><span class="orange-text">39€ HT / mois</span>.</p>
+                <div class="result-btns">
+                    <a href="/offre-solo/" class="blue-btn">Détail de la formule</a>
+                    <input type="button" class="blue-btn" value="J\'essaye gratuitement">
+                    <a href="/webinaires-demo/" class="blue-btn">Je participe à une démo en live</a>
+                    <a href="/inscription-formdev/" class="blue-btn">Je m\'inscris</a>
+                </div>
+                <p>Vous avez des questions ? <a href="/contact/">Contactez-nous</a></p>
+                <label class="previous-arrow">
+                    <input type="button" class="previous back-to-independant">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.5939 22.9406L0.42378 12.7704C0.269687 12.6163 0.16028 12.4494 0.0955614 12.2696C0.0308423 12.0898 -0.00100321 11.8972 2.40772e-05 11.6918C2.40772e-05 11.4863 0.0323839 11.2937 0.0971029 11.1139C0.161822 10.9341 0.270714 10.7672 0.42378 10.6131L10.5939 0.442876C10.8764 0.16037 11.2298 0.0129533 11.6541 0.000625755C12.0783 -0.0117018 12.4441 0.135715 12.7512 0.442876C13.0594 0.725382 13.2202 1.07877 13.2335 1.50304C13.2469 1.92732 13.0989 2.29303 12.7897 2.6002L5.23918 10.1508H22.4591C22.8957 10.1508 23.2619 10.2987 23.5577 10.5946C23.8536 10.8905 24.001 11.2562 24 11.6918C24 12.1284 23.8526 12.4946 23.5577 12.7904C23.2629 13.0863 22.8967 13.2337 22.4591 13.2327H5.23918L12.7897 20.7833C13.0722 21.0658 13.2202 21.4254 13.2335 21.862C13.2469 22.2986 13.0989 22.6581 12.7897 22.9406C12.5072 23.2488 12.1477 23.4029 11.7111 23.4029C11.2745 23.4029 10.9021 23.2488 10.5939 22.9406Z" fill="#0C73B7"/>
+                    </svg>
+                </label>
+                <p class="progression">3/3</p>
+            </fieldset>	
+            <fieldset class="essai-gratuit">
+                <a href="/acceder-a-la-demo/">Je teste form.dev sur une <span class="orange-text">base de démonstration</span></a>
+                <a href="/essai-15-jours/">Je teste form.dev avec <span class="orange-text">mes propres données</span> 15 jours gratuitement</a>
+                <label class="previous-arrow">
+                    <input type="button" class="previous back-to-result">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.5939 22.9406L0.42378 12.7704C0.269687 12.6163 0.16028 12.4494 0.0955614 12.2696C0.0308423 12.0898 -0.00100321 11.8972 2.40772e-05 11.6918C2.40772e-05 11.4863 0.0323839 11.2937 0.0971029 11.1139C0.161822 10.9341 0.270714 10.7672 0.42378 10.6131L10.5939 0.442876C10.8764 0.16037 11.2298 0.0129533 11.6541 0.000625755C12.0783 -0.0117018 12.4441 0.135715 12.7512 0.442876C13.0594 0.725382 13.2202 1.07877 13.2335 1.50304C13.2469 1.92732 13.0989 2.29303 12.7897 2.6002L5.23918 10.1508H22.4591C22.8957 10.1508 23.2619 10.2987 23.5577 10.5946C23.8536 10.8905 24.001 11.2562 24 11.6918C24 12.1284 23.8526 12.4946 23.5577 12.7904C23.2629 13.0863 22.8967 13.2337 22.4591 13.2327H5.23918L12.7897 20.7833C13.0722 21.0658 13.2202 21.4254 13.2335 21.862C13.2469 22.2986 13.0989 22.6581 12.7897 22.9406C12.5072 23.2488 12.1477 23.4029 11.7111 23.4029C11.2745 23.4029 10.9021 23.2488 10.5939 22.9406Z" fill="#0C73B7"/>
+                    </svg>
+                </label>
+            </fieldset>	
+                <!--  Choix : Société  -->
+                <fieldset id="form-societe">
+                <p class="form-title"></p>
+                <div class="form-container">
+                    <div class="form-group form-group-4">
+                        <label for="nbr-utilisateurs">Nombre d\'utilisateurs</label>
+                        <p class="recap" id="nombre-utilisateurs"></p>
+                        <input type="button" id="nbr-utilisateurs" class="blue-btn" value="Configurer">
+                    </div>
+                    <div class="form-group form-group-4">
+                        <label for="nbr-formateurs">Nombre de formateurs</label>
+                        <p class="recap" id="nombre-formateurs"></p>
+                        <input type="button" id="nbr-formateurs" class="blue-btn" value="Configurer">
+                    </div>
+                    <div class="form-group form-group-4">
+                        <label for="nbr-stagiaires">Nombre de stagiaires</label>
+                        <p class="recap" id="nombre-stagiaires"></p>
+                        <input type="button" id="nbr-stagiaires" class="blue-btn" value="Configurer">
+                    </div>
+                    <div class="form-group form-group-4">
+                        <label for="options-customisation">Options de customisation</label>
+                        <p class="recap" id="option-customisation"></p>
+                        <input type="button" id="options-customisation" class="blue-btn" value="Configurer">
+                    </div>
+                </div>
+                <input type="button" class="blue-btn btn-center" id="societe-validation" value="Valider" disabled>
+                <label class="previous-arrow">
+                    <input type="button" class="previous back-to-statut">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.5939 22.9406L0.42378 12.7704C0.269687 12.6163 0.16028 12.4494 0.0955614 12.2696C0.0308423 12.0898 -0.00100321 11.8972 2.40772e-05 11.6918C2.40772e-05 11.4863 0.0323839 11.2937 0.0971029 11.1139C0.161822 10.9341 0.270714 10.7672 0.42378 10.6131L10.5939 0.442876C10.8764 0.16037 11.2298 0.0129533 11.6541 0.000625755C12.0783 -0.0117018 12.4441 0.135715 12.7512 0.442876C13.0594 0.725382 13.2202 1.07877 13.2335 1.50304C13.2469 1.92732 13.0989 2.29303 12.7897 2.6002L5.23918 10.1508H22.4591C22.8957 10.1508 23.2619 10.2987 23.5577 10.5946C23.8536 10.8905 24.001 11.2562 24 11.6918C24 12.1284 23.8526 12.4946 23.5577 12.7904C23.2629 13.0863 22.8967 13.2337 22.4591 13.2327H5.23918L12.7897 20.7833C13.0722 21.0658 13.2202 21.4254 13.2335 21.862C13.2469 22.2986 13.0989 22.6581 12.7897 22.9406C12.5072 23.2488 12.1477 23.4029 11.7111 23.4029C11.2745 23.4029 10.9021 23.2488 10.5939 22.9406Z" fill="#0C73B7"/>
+                    </svg>
+                </label>
+                <p class="progression">2/3</p>
+            </fieldset>
+            <fieldset class="choices-societe choice-nbr-utilisateurs">
+                <p class="form-title">Nombre d\'<span class="orange-text">utilisateurs</span></p>
+                <div>
+                    <input type="number" id="input-nbr-utilisateurs" min="1" max="10000000" value="1" step="1" oninput="validity.valid || (value = this.previousValue)">
+                    <input type="button" class="blue-btn" id="nbr-utilisateurs-validation" value="Valider">
+                </div>
+                <label class="previous-arrow">
+                    <input type="button" class="previous back-to-societe">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.5939 22.9406L0.42378 12.7704C0.269687 12.6163 0.16028 12.4494 0.0955614 12.2696C0.0308423 12.0898 -0.00100321 11.8972 2.40772e-05 11.6918C2.40772e-05 11.4863 0.0323839 11.2937 0.0971029 11.1139C0.161822 10.9341 0.270714 10.7672 0.42378 10.6131L10.5939 0.442876C10.8764 0.16037 11.2298 0.0129533 11.6541 0.000625755C12.0783 -0.0117018 12.4441 0.135715 12.7512 0.442876C13.0594 0.725382 13.2202 1.07877 13.2335 1.50304C13.2469 1.92732 13.0989 2.29303 12.7897 2.6002L5.23918 10.1508H22.4591C22.8957 10.1508 23.2619 10.2987 23.5577 10.5946C23.8536 10.8905 24.001 11.2562 24 11.6918C24 12.1284 23.8526 12.4946 23.5577 12.7904C23.2629 13.0863 22.8967 13.2337 22.4591 13.2327H5.23918L12.7897 20.7833C13.0722 21.0658 13.2202 21.4254 13.2335 21.862C13.2469 22.2986 13.0989 22.6581 12.7897 22.9406C12.5072 23.2488 12.1477 23.4029 11.7111 23.4029C11.2745 23.4029 10.9021 23.2488 10.5939 22.9406Z" fill="#0C73B7"/>
+                    </svg>
+                </label>
+            </fieldset>
+            <fieldset class="choices-societe choice-nbr-formateurs">
+                <p class="form-title">Nombre de <span class="orange-text">formateurs</span></p>
+                <div class="form-container">
+                    <div class="form-group form-group-3">
+                        <label for="0-5-formateurs">0 à 5 formateurs</label>
+                        <input type="button" id="0-5-formateurs" class="blue-btn" value="Choisir">
+                    </div>
+                    <div class="form-group form-group-3">
+                        <label for="5-30-formateurs">5 à 30 formateurs</label>
+                        <input type="button" id="5-30-formateurs" class="blue-btn" value="Choisir">
+                    </div>
+                    <div class="form-group form-group-3">
+                        <label for="30-plus-formateurs">30 formateurs et plus</label>
+                        <input type="button" id="30-plus-formateurs" class="blue-btn" value="Choisir">
+                    </div>
+                </div>
+                <label class="previous-arrow">
+                    <input type="button" class="previous back-to-societe">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.5939 22.9406L0.42378 12.7704C0.269687 12.6163 0.16028 12.4494 0.0955614 12.2696C0.0308423 12.0898 -0.00100321 11.8972 2.40772e-05 11.6918C2.40772e-05 11.4863 0.0323839 11.2937 0.0971029 11.1139C0.161822 10.9341 0.270714 10.7672 0.42378 10.6131L10.5939 0.442876C10.8764 0.16037 11.2298 0.0129533 11.6541 0.000625755C12.0783 -0.0117018 12.4441 0.135715 12.7512 0.442876C13.0594 0.725382 13.2202 1.07877 13.2335 1.50304C13.2469 1.92732 13.0989 2.29303 12.7897 2.6002L5.23918 10.1508H22.4591C22.8957 10.1508 23.2619 10.2987 23.5577 10.5946C23.8536 10.8905 24.001 11.2562 24 11.6918C24 12.1284 23.8526 12.4946 23.5577 12.7904C23.2629 13.0863 22.8967 13.2337 22.4591 13.2327H5.23918L12.7897 20.7833C13.0722 21.0658 13.2202 21.4254 13.2335 21.862C13.2469 22.2986 13.0989 22.6581 12.7897 22.9406C12.5072 23.2488 12.1477 23.4029 11.7111 23.4029C11.2745 23.4029 10.9021 23.2488 10.5939 22.9406Z" fill="#0C73B7"/>
+                    </svg>
+                </label>
+            </fieldset>	
+            <fieldset class="choices-societe choice-nbr-stagiaires">
+                <p class="form-title">Nombre de <span class="orange-text">stagiaires</span></p>
+                <div class="form-container">
+                    <div class="form-group form-group-4">
+                        <label for="1-600">1 à 600 par an</label>
+                        <input type="button" id="1-600" class="blue-btn" value="Choisir">
+                    </div>
+                    <div class="form-group form-group-4">
+                        <label for="600-900">600 à 900 par an</label>
+                        <input type="button" id="600-900" class="blue-btn" value="Choisir">
+                    </div>
+                    <div class="form-group form-group-4">
+                        <label for="900-1000">900 à 1000 par an</label>
+                        <input type="button" id="900-1000" class="blue-btn" value="Choisir">
+                    </div>
+                    <div class="form-group form-group-4">
+                        <label for="1000-plus">1000 et plus par an</label>
+                        <input type="button" id="1000-plus" class="blue-btn" value="Choisir">
+                    </div>
+                </div>
+                <label class="previous-arrow">
+                    <input type="button" class="previous back-to-societe">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.5939 22.9406L0.42378 12.7704C0.269687 12.6163 0.16028 12.4494 0.0955614 12.2696C0.0308423 12.0898 -0.00100321 11.8972 2.40772e-05 11.6918C2.40772e-05 11.4863 0.0323839 11.2937 0.0971029 11.1139C0.161822 10.9341 0.270714 10.7672 0.42378 10.6131L10.5939 0.442876C10.8764 0.16037 11.2298 0.0129533 11.6541 0.000625755C12.0783 -0.0117018 12.4441 0.135715 12.7512 0.442876C13.0594 0.725382 13.2202 1.07877 13.2335 1.50304C13.2469 1.92732 13.0989 2.29303 12.7897 2.6002L5.23918 10.1508H22.4591C22.8957 10.1508 23.2619 10.2987 23.5577 10.5946C23.8536 10.8905 24.001 11.2562 24 11.6918C24 12.1284 23.8526 12.4946 23.5577 12.7904C23.2629 13.0863 22.8967 13.2337 22.4591 13.2327H5.23918L12.7897 20.7833C13.0722 21.0658 13.2202 21.4254 13.2335 21.862C13.2469 22.2986 13.0989 22.6581 12.7897 22.9406C12.5072 23.2488 12.1477 23.4029 11.7111 23.4029C11.2745 23.4029 10.9021 23.2488 10.5939 22.9406Z" fill="#0C73B7"/>
+                    </svg>
+                </label>
+            </fieldset>	
+            <fieldset class="choice-options-customisation">
+                <p class="form-title">Options de <span class="orange-text">customisation</span></p>
+                <div class="form-container">
+                    <div>
+                        <div class="form-group form-group-8">
+                            <input type="checkbox" id="sms" name="sms">
+                            <label for="sms">Envoi de SMS depuis Form.dev</label>
+                        </div>
+                        <div class="form-group form-group-8">
+                            <input type="checkbox" id="signature-elec" name="signature-elec">
+                            <label for="signature-elec">Signature électronique pour émargements</label>
+                        </div>
+                        <div class="form-group form-group-8">
+                            <input type="checkbox" id="signature-num" name="signature-num">
+                            <label for="signature-num">Signature numérique pour documents</label>
+                        </div>
+                        <div class="form-group form-group-8">
+                            <input type="checkbox" id="api" name="api">
+                            <label for="api">Connecteur API pour connecter Form.dev à d\'autres plateformes</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form-group form-group-8">
+                            <input type="checkbox" id="extranet" name="extranet">
+                            <label for="extranet">Personnalisation de l\'extranet des clients et stagiaires</label>
+                        </div>
+                        <div class="form-group form-group-8">
+                            <input type="checkbox" id="catalogue" name="catalogue">
+                            <label for="catalogue">J\'ai besoin d\'un site web qui présente le catalogue de mes formations</label>
+                        </div>
+                        <div class="form-group form-group-8 multi-societes">
+                            <input type="checkbox" id="multi" name="multi">
+                            <label for="multi">J\'ai besoin de gérer mes sociétés au sein du même compte</label>
+                        </div>
+                        <div class="form-group form-group-8">
+                            <input type="checkbox" id="aucune-option" name="aucune-option">
+                            <label for="aucune-option">Aucune option</label>
+                        </div>
+                    </div>
+                </div>
+                <input type="button" class="blue-btn btn-center" value="Confirmer">
+                <label class="previous-arrow">
+                    <input type="button" class="previous back-to-societe">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.5939 22.9406L0.42378 12.7704C0.269687 12.6163 0.16028 12.4494 0.0955614 12.2696C0.0308423 12.0898 -0.00100321 11.8972 2.40772e-05 11.6918C2.40772e-05 11.4863 0.0323839 11.2937 0.0971029 11.1139C0.161822 10.9341 0.270714 10.7672 0.42378 10.6131L10.5939 0.442876C10.8764 0.16037 11.2298 0.0129533 11.6541 0.000625755C12.0783 -0.0117018 12.4441 0.135715 12.7512 0.442876C13.0594 0.725382 13.2202 1.07877 13.2335 1.50304C13.2469 1.92732 13.0989 2.29303 12.7897 2.6002L5.23918 10.1508H22.4591C22.8957 10.1508 23.2619 10.2987 23.5577 10.5946C23.8536 10.8905 24.001 11.2562 24 11.6918C24 12.1284 23.8526 12.4946 23.5577 12.7904C23.2629 13.0863 22.8967 13.2337 22.4591 13.2327H5.23918L12.7897 20.7833C13.0722 21.0658 13.2202 21.4254 13.2335 21.862C13.2469 22.2986 13.0989 22.6581 12.7897 22.9406C12.5072 23.2488 12.1477 23.4029 11.7111 23.4029C11.2745 23.4029 10.9021 23.2488 10.5939 22.9406Z" fill="#0C73B7"/>
+                    </svg>
+                </label>
+            </fieldset>	
+            <fieldset class="result result-societe">
+                <p><span>Félicitations</span>, vous avez déterminé vos besoins !</p>
+                <img alt="" src="images/sous-traitance.png">
+                <p>La formule <span class="orange-text">« <span class="formule-result"></span> »</span> est la<br>plus adaptée à votre activité<br><span class="orange-text"><span class="price"></span>€ HT / mois</span>.</p>
+                <div class="result-btns">
+                    <a href="/tarifs-formdev/#formules-tarifs" class="blue-btn" id="detail-formule">Détail de la formule</a>
+                    <input type="button" class="blue-btn" value="J\'essaye gratuitement">
+                    <a href="/webinaires-demo/" class="blue-btn">Je participe à une démo en live</a>
+                    <a href="/inscription-formdev/" class="blue-btn">Je m\'inscris</a>
+                </div>
+                <p>Vous avez des questions ? <a href="/contact/">Contactez-nous</a></p>
+                <label class="previous-arrow">
+                    <input type="button" class="previous back-to-societe">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.5939 22.9406L0.42378 12.7704C0.269687 12.6163 0.16028 12.4494 0.0955614 12.2696C0.0308423 12.0898 -0.00100321 11.8972 2.40772e-05 11.6918C2.40772e-05 11.4863 0.0323839 11.2937 0.0971029 11.1139C0.161822 10.9341 0.270714 10.7672 0.42378 10.6131L10.5939 0.442876C10.8764 0.16037 11.2298 0.0129533 11.6541 0.000625755C12.0783 -0.0117018 12.4441 0.135715 12.7512 0.442876C13.0594 0.725382 13.2202 1.07877 13.2335 1.50304C13.2469 1.92732 13.0989 2.29303 12.7897 2.6002L5.23918 10.1508H22.4591C22.8957 10.1508 23.2619 10.2987 23.5577 10.5946C23.8536 10.8905 24.001 11.2562 24 11.6918C24 12.1284 23.8526 12.4946 23.5577 12.7904C23.2629 13.0863 22.8967 13.2337 22.4591 13.2327H5.23918L12.7897 20.7833C13.0722 21.0658 13.2202 21.4254 13.2335 21.862C13.2469 22.2986 13.0989 22.6581 12.7897 22.9406C12.5072 23.2488 12.1477 23.4029 11.7111 23.4029C11.2745 23.4029 10.9021 23.2488 10.5939 22.9406Z" fill="#0C73B7"/>
+                    </svg>
+                </label>
+                <p class="progression">3/3</p>
+            </fieldset>
+            <fieldset class="essai-gratuit-societe">
+                <a href="/acceder-a-la-demo/">Je teste form.dev sur une <span class="orange-text">base de démonstration</span></a>
+                <a href="/essai-15-jours/">Je teste form.dev avec <span class="orange-text">mes propres données</span> 15 jours gratuitement</a>
+                <label class="previous-arrow">
+                    <input type="button" class="previous back-to-result-societe">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.5939 22.9406L0.42378 12.7704C0.269687 12.6163 0.16028 12.4494 0.0955614 12.2696C0.0308423 12.0898 -0.00100321 11.8972 2.40772e-05 11.6918C2.40772e-05 11.4863 0.0323839 11.2937 0.0971029 11.1139C0.161822 10.9341 0.270714 10.7672 0.42378 10.6131L10.5939 0.442876C10.8764 0.16037 11.2298 0.0129533 11.6541 0.000625755C12.0783 -0.0117018 12.4441 0.135715 12.7512 0.442876C13.0594 0.725382 13.2202 1.07877 13.2335 1.50304C13.2469 1.92732 13.0989 2.29303 12.7897 2.6002L5.23918 10.1508H22.4591C22.8957 10.1508 23.2619 10.2987 23.5577 10.5946C23.8536 10.8905 24.001 11.2562 24 11.6918C24 12.1284 23.8526 12.4946 23.5577 12.7904C23.2629 13.0863 22.8967 13.2337 22.4591 13.2327H5.23918L12.7897 20.7833C13.0722 21.0658 13.2202 21.4254 13.2335 21.862C13.2469 22.2986 13.0989 22.6581 12.7897 22.9406C12.5072 23.2488 12.1477 23.4029 11.7111 23.4029C11.2745 23.4029 10.9021 23.2488 10.5939 22.9406Z" fill="#0C73B7"/>
+                    </svg>
+                </label>
+            </fieldset>	
+        </form>
+    </body>
+</html>
